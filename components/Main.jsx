@@ -16,7 +16,13 @@ const Main = () => {
           </h1>
 
           <h1 className="py-2 text-gray-700">A Front-end Web Developer</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
+            "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit..." "There is no one who loves pain
+            itself, who seeks after it and wants to have it, simply because it
+            is pain..."
+          </p>
+          <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
             "A New Generation Emerges from this point"
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">

@@ -23,7 +23,7 @@ function Particle() {
       options={{
         background: {
           color: {
-            value: "",
+            value: "0",
           },
         },
         fpsLimit: 60,
@@ -57,19 +57,19 @@ function Particle() {
             color: "#000000",
             distance: 150,
             enable: true,
-            opacity: 0.3,
+            opacity: 0.1,
             width: 0.4,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             directions: "none",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "out",
             },
-            random: false,
+            random: true,
             speed: 2,
             straight: false,
           },
@@ -81,7 +81,7 @@ function Particle() {
             value: 50,
           },
           opacity: {
-            value: 0.2,
+            value: 0.1,
           },
           shape: {
             type: "circle",
