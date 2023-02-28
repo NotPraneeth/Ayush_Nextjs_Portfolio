@@ -26,8 +26,8 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? "fixed w-full bg-[#ecf0f3] h-20 shadow-xl z-[100]"
-          : "fixed w-full bg-[#ecf0f3] h-20 z-[100]"
+          ? "fixed bg-[#ecf0f3] w-full h-20 shadow-xl z-[100]"
+          : "fixed bg-[#ecf0f3] w-full h-20 z-[100]"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -82,12 +82,14 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image
-                src="/../public/favicon.ico"
-                width="87"
-                height="35"
-                alt="/"
-              />
+              <Link href="/">
+                <Image
+                  src="/../public/favicon.ico"
+                  width="87"
+                  height="35"
+                  alt="/"
+                />
+              </Link>
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -102,19 +104,29 @@ const Navbar = () => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Home
+                </li>
               </Link>
               <Link href="/#about">
-                <li className="py-4 text-sm">About</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  About
+                </li>
               </Link>
               <Link href="/#skills">
-                <li className="py-4 text-sm">Skills</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Skills
+                </li>
               </Link>
               <Link href="/#projects">
-                <li className="py-4 text-sm">Projects</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Projects
+                </li>
               </Link>
               <Link href="/#contact">
-                <li className="py-4 text-sm">contact</li>
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  contact
+                </li>
               </Link>
             </ul>
             <div className="pt-40">
@@ -125,6 +137,7 @@ const Navbar = () => {
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <FaLinkedinIn />
                 </div>
+
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <FaGithub />
                 </div>
