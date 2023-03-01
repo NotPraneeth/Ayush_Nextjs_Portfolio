@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/">
           <Image
-            src="/../public/assets/favicon.ico"
+            src="https://github.com/Ayush200230/Nextjs_Portfolio/blob/main/public/assets/favicon.ico"
             alt="/"
             width="70"
             height="50"
