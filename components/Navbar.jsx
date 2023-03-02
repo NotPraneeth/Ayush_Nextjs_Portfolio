@@ -6,6 +6,18 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
+  const onButtonClick = () => {
+    fetch("resume.pdf").then((response) => {
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "resume.pdf";
+        alink.click();
+      });
+    });
+  };
+
   const [nav, setNav] = useState(false);
   const [shadow, setshadow] = useState(false);
   const handleNav = () => {
@@ -37,6 +49,15 @@ const Navbar = () => {
 
         <div>
           <ul className="hidden md:flex">
+            <li>
+              <button
+                onClick={onButtonClick}
+                className="text-sm p-1 uppercase hover:border-b text-gray-100"
+              >
+                Resume
+              </button>
+            </li>
+
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
