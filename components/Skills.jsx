@@ -15,7 +15,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/html.png"
+                  src="/assets/skills/html.png"
                   width="70"
                   height="64"
                   alt="/"
@@ -32,7 +32,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/css-alt.png"
+                  src="/assets/skills/css-alt.png"
                   width="70"
                   height="64"
                   alt="/"
@@ -48,7 +48,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/javascript.png"
+                  src="/assets/skills/javascript.png"
                   width="70"
                   height="64"
                   alt="/"
@@ -64,7 +64,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/nextjs.png"
+                  src="/assets/skills/nextjs.png"
                   width="80"
                   height="64"
                   alt="/"
@@ -80,7 +80,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/tailwind.png"
+                  src="/assets/skills/tailwind.png"
                   width="75"
                   height="64"
                   alt="/"
@@ -96,7 +96,7 @@ const Skills = () => {
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
-                  src="/../public/assets/skills/github.png"
+                  src="/assets/skills/github.png"
                   width="100"
                   height="64"
                   alt="/"
