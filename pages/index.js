@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Particle from "@/components/Particle";
-import Certificate from "@/components/certificate";
+import Certificate from "@/components/Certificate";
 
 export default function Home() {
   return (
