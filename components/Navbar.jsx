@@ -79,6 +79,7 @@ const Navbar = () => {
             <div className="flex w-full items-center justify-between">
               <Link href="/">
                 <Image
+                  onClick={() => setNav(false)}
                   src="/assets/favicon.ico"
                   width="87"
                   height="35"
