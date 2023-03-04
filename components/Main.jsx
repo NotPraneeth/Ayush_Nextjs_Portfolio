@@ -11,12 +11,14 @@ const Main = () => {
           <p className="uppercase text-sm tracking-widest text-gray-600">
             Building in Progress
           </p>
-          <h1 className="py-4 text-gray-700">
+          <h1 className="py-4 text-gray-700 dark:text-gray-100">
             Hi, I'm <span className="text-[#5651e5]"> Ayush</span>
           </h1>
 
-          <h1 className="py-2 text-gray-700">A Front-end Web Developer</h1>
-          <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
+          <h1 className="py-2 text-gray-700 dark:text-gray-100">
+            A Front-end Web Developer
+          </h1>
+          <p className="py-4 text-gray-600 dark:text-gray-100 sm:max-w-[70%] m-auto">
             "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
             consectetur, adipisci velit..." "There is no one who loves pain
             itself, who seeks after it and wants to have it, simply because it
@@ -25,7 +27,7 @@ const Main = () => {
           <p className="py-4 text-gray-600 sm:max-w-[70%] m-auto">
             "A New Generation Emerges from this point"
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <div className="flex items-center justify-between max-w-[330px] m-auto py-4 dark:text-white">
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <FaLinkedinIn />
             </div>

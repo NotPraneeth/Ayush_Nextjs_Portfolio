@@ -8,7 +8,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 const Contact = () => {
   return (
     <div id="contact" className="w=full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+      <div className="max-w-[1240px] m-auto px-2 py-16 w-full dark:text-gray-50">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
         </p>
@@ -89,7 +89,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Message</label>
                   <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300 "
+                    className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
                   ></textarea>
                 </div>

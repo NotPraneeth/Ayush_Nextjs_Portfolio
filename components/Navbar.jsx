@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -17,6 +18,8 @@ const Navbar = () => {
       });
     });
   };
+
+  const { theme, setTheme } = useTheme();
 
   const [nav, setNav] = useState(false);
   const [shadow, setshadow] = useState(false);
@@ -38,21 +41,36 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? "fixed bg-[#ecf0f3] w-full h-20 shadow-xl z-[100]"
-          : "fixed bg-[#ecf0f3] w-full h-20 z-[100]"
+          ? "fixed bg-[#ecf0f3] dark:bg-gray-900 w-full h-20 shadow-xl dark:shadow-neutral-500 z-[100]"
+          : "fixed bg-[#ecf0f3] dark:bg-gray-900 w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 ">
         <Link href="/">
-          <Image src="/assets/favicon.ico" alt="/" width="70" height="50" />
+          <Image
+            className="dark:rounded-full dark:shadow-lg dark:shadow-gray-400"
+            src="/assets/favicon.ico"
+            alt="/"
+            width="70"
+            height="50"
+          />
         </Link>
 
         <div>
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex dark:text-gray-50">
+            <li>
+              <button
+                aria-label="Toggle Dark Mode"
+                className="ml-10 text-sm p-1 uppercase hover:border-b text-gray-100"
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              >
+                click me
+              </button>
+            </li>
             <li>
               <button
                 onClick={onButtonClick}
-                className="text-sm p-1 uppercase hover:border-b text-gray-100"
+                className="ml-10 text-sm p-1 uppercase hover:border-b text-gray-100"
               >
                 Resume
               </button>
@@ -72,13 +90,18 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
+            <Link href="/#certificate">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                Certificate
+              </li>
+            </Link>
             <Link href="/#contact">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Contact
               </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className="md:hidden">
+          <div onClick={handleNav} className="md:hidden dark:text-gray-50">
             <AiOutlineMenu size={25} />
           </div>
         </div>
@@ -114,8 +137,29 @@ const Navbar = () => {
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4">
+            <div className="flex border-b border-gray-300 my-4">
               <p className="w-[85%] md:w-[90%] py-4">Ayush's Portfolio</p>
+              <ul className="flex">
+                <li>
+                  <button
+                    aria-label="Toggle Dark Mode"
+                    className=" text-sm p-1 hover:border-b"
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    click me
+                  </button>
+                </li>
+                <li className="py-4">
+                  <button
+                    onClick={onButtonClick}
+                    className="ml-10 text-sm p-1 hover:border-b"
+                  >
+                    Resume
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="py-4 flex flex-col">
@@ -140,13 +184,18 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link>
+              <Link href="/#certificate">
+                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                  Certificate
+                </li>
+              </Link>
               <Link href="/#contact">
                 <li onClick={() => setNav(false)} className="py-4 text-sm">
                   contact
                 </li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-20">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Coding Time
               </p>
