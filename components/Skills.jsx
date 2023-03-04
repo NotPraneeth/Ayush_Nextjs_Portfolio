@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import Tilt from 'react-tilt'
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <div id="skills" className="w-full h-[150vh] p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
@@ -11,7 +12,7 @@ const Skills = () => {
         <h2 className="py-4">What I can Do</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/*HTML*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl h-96 rounded-xl flex flex-col justify-center hover:scale-105 ease-in duration-300" data-tilt>
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -25,10 +26,10 @@ const Skills = () => {
                 <h3>HTML</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
 
           {/*CSS*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl h-96 flex flex-col justify-center rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -42,9 +43,9 @@ const Skills = () => {
                 <h3>CSS</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
           {/*Javascript*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl h-96 flex flex-col justify-center rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -58,10 +59,10 @@ const Skills = () => {
                 <h3>JavaScript</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
           {/*Next.JS*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl rounded-xl flex flex-col justify-center hover:scale-105  ease-in duration-300 h-96 self-center">
+            <div className="flex gap-4">
               <div className="m-auto">
                 <Image
                   src="/assets/skills/nextjs.png"
@@ -74,9 +75,9 @@ const Skills = () => {
                 <h3>NextJs</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
           {/*Tailwind*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl h-96 flex flex-col justify-center rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -90,9 +91,9 @@ const Skills = () => {
                 <h3>Tailwind</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
           {/*Github*/}
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <Tilt options={{speed:3000,reverse:false,easing:"cubic-bezier(.03,.98,.52,.99)",scale:1.1}} className="p-6 shadow-xl rounded-xl h-96 flex flex-col justify-center hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -106,7 +107,7 @@ const Skills = () => {
                 <h3>Github</h3>
               </div>
             </div>
-          </div>
+          </Tilt>
         </div>
       </div>
     </div>
