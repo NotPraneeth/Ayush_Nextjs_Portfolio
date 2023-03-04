@@ -57,8 +57,8 @@ function Particle() {
             color: "#000000",
             distance: 150,
             enable: true,
-            opacity: 0.1,
-            width: 0.4,
+            opacity: 0.2,
+            width: 0.1,
           },
           collisions: {
             enable: false,
@@ -84,7 +84,7 @@ function Particle() {
             value: 0.1,
           },
           shape: {
-            type: "circle",
+            type: "star",
           },
           size: {
             value: { min: 1, max: 5 },
